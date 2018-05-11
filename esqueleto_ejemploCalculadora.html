@@ -1,0 +1,32 @@
+<script type="text/javascript">
+function suma(){
+var op1=document.getElementById('op1').value;
+var op2=document.getElementById('op2').value;
+document.getElementById('result').innerHTML=parseInt(op1)+parseInt(op2);
+}
+function resta(){
+var op1=document.getElementById('op1').value;
+var op2=document.getElementById('op2').value;
+document.getElementById('result').innerHTML=parseInt(op1)-parseInt(op2);
+}
+function multiplica(){
+var op1=document.getElementById('op1').value;
+var op2=document.getElementById('op2').value;
+document.getElementById('result').innerHTML=parseInt(op1)*parseInt(op2);
+}
+function divide(){
+var op1=document.getElementById('op1').value;
+var op2=document.getElementById('op2').value;
+document.getElementById('result').innerHTML=parseInt(op1)/parseInt(op2);
+}
+</script>
+<body>
+<input id="op1" type="text">
+<input id="op2" type="text">
+<p id="result">Resultado</p>
+<button type="button" onclick="suma()"> Suma</button>
+<button type="button" onclick="resta()"> Resta</button>
+<button type="button" onclick="multiplica()"> Multiplica</button>
+<button type="button" onclick="divide()"> Divide</button>
+</body>
+</html>

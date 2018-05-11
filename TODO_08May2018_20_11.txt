@@ -1,0 +1,130 @@
+// TODO : mostrar por pantalla, un saludo
+<html>
+<script type="text/javascript">
+function saluda(){
+alert(document.getElementById('demo').innerHTML = "HOLA");
+}
+</script>
+<body>
+<button type="button" onclick="saluda()"> Prueba</button>
+<p id=demo></p>
+</html>
+// TODO : crear una funcion sin args que al ejecutar muestre un saludo por pantalla
+<html>
+<script type="text/javascript">
+function saluda(){
+alert(document.getElementById('demo').innerHTML = "HOLA");
+}
+</script>
+<body>
+<button type="button" onclick="saluda()"> Prueba</button>
+<p id=demo></p>
+</html>
+// TODO : crear una funcion con un argumento que muestre el argumento por pantalla
+function misaludo(a){
+var sal = "HOLA " + a;
+//alert(document.getElementById('demo').innerHTML = sal);
+print(sal);
+return sal;
+}
+// TODO : crear una funcion con un argumento booleano: si es true que salude, si false que se despida
+function saludoBool(){
+var resultado=misaludoBool(a);
+print(resultado);
+}
+function misaludoBool(a){
+	if (a==true){
+		var sal = "HOLA, Buenas tardes";
+	}
+	else{
+		var sal = "Adios, hasta pronto! ";
+	}
+//alert(document.getElementById('demo').innerHTML = sal);
+print(sal);
+return sal;
+}
+// TODO : crear una funcion con un argumento booleano y un string : true saluda al contenido del string, false se despide del contenido del string
+function misaludoBoolArg(a,b){
+	if (a==true){
+		var sal = "HOLA, Buenas tardes";
+	}
+	else{
+		var sal = "Adios, hasta pronto! ";
+	}
+//alert(document.getElementById('demo').innerHTML = sal);
+print(sal.concat(" ",b));
+return sal.concat(" ",b);
+}
+// TODO : funcion que le pasas una temperatura en celsius y la devuelve en faherenheit, mostrar el resultado por pantalla
+function convert(a){
+	var x = a * 9 / 5 + 32;
+	var result = Math.round(x);
+	var muestra = a + " gradCent = " + result + " gradFaherenheit "
+print(muestra);
+return result;
+}
+// TODO : funcion que le pasas un numero y muestra por pantalla todos los numeros consecutivos hasta el cero
+function muestraNumerosDescentente(a){
+    for(var i=a;i>=0;i--){
+		print(i);
+	}
+}
+// TODO : funcion que le pasas un numero y muestra por pantalla todos los numeros desde el numero hasta cero y al lado tantos guiones como valor del numero ej: f(3) 3 ---  
+//                                                                                                                                                                   2 -- 
+//																																							 1 - 
+//																																							 0 
+function muestraNumerosDescententeACeroConGuiones(a){
+    for(var i=a;i>=0;i--){
+		var cadena = "";
+		for(var j=0;j<i;j++){
+			cadena = cadena + "-";
+		}
+		var temp = i.toString();
+		temp = temp + " " + cadena;
+		print(temp);
+	}
+}
+// TODO : funcion que recibe un numero y pinta un cuadrado del tamaño del lado igual al numero ej : f(2)   - -
+//                                                                                                        |   |
+//	                                																	  |   |
+//									         															   - -
+function pintaCuadrado(a){
+	var cadena0 = "";
+	var cadena1 = " -";
+    for(var i=0;i<a;i++){
+		cadena0=cadena0+cadena1;
+	}
+	cadena2="";
+	cadena3="| ";
+    for(var i=1;i<a;i++){
+		cadena2=cadena2+"  ";
+	}
+	cadena3=cadena3+cadena2+"|";
+	print(cadena0);
+    for(var i=0;i<a;i++){
+		print(cadena3);
+	}
+	print(cadena0);
+}
+// TODO: funcion que recibve un numero y una cadena de un solo caracter (validado) y pinto un cuadrado relledo del caracter descrito, ej:  - -
+//                                                                                                                                        |* *|
+//                                                                                                                                        |* *|
+//                                                                                                                                         - -
+function pintaCuadradoRelleno(a){
+	var cadena0 = "";
+	var cadena1 = " -";
+    for(var i=0;i<a;i++){
+		cadena0=cadena0+cadena1;
+	}
+	cadena2="";
+	cadena3="|*";
+    for(var i=1;i<a;i++){
+		cadena2=cadena2+" *";
+	}
+	cadena3=cadena3+cadena2+"|";
+	print(cadena0);
+    for(var i=0;i<a;i++){
+		print(cadena3);
+	}
+	print(cadena0);
+}

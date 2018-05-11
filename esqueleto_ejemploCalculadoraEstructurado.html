@@ -1,0 +1,50 @@
+<script type="text/javascript">
+function suma(){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+var resultado=miSuma(a,b);
+document.getElementById('result').innerHTML=parseInt(resultado);
+}
+function resta(){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+var resultado=miResta(a,b);
+document.getElementById('result').innerHTML=parseInt(resultado);
+}
+function multiplica(){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+var resultado=miMultiplicacion(a,b);
+document.getElementById('result').innerHTML=resultado;
+}
+function divide(){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+resultado=miDivision(a,b);
+document.getElementById('result').innerHTML=resultado;
+}
+</script>
+<script type="text/javascript">
+function miSuma(a,b){
+return a+b;
+}
+function miResta(a,b){
+return a-b;
+}
+function miMultiplicacion(a,b){
+return a*b;
+}
+function miDivision(a,b){
+return(a/b);
+}
+</script>
+<body>
+<input id="op1" type="text">
+<input id="op2" type="text">
+<p id="result">Resultado</p>
+<button type="button" onclick="suma()"> Suma</button>
+<button type="button" onclick="resta()"> Resta</button>
+<button type="button" onclick="multiplica()"> Multiplica</button>
+<button type="button" onclick="divide()"> Divide</button>
+</body>
+</html>

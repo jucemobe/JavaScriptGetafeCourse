@@ -1,0 +1,42 @@
+<script type="text/javascript">
+function crearCuentasBancarias( ){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+var resultado=micrearCuentasBancarias(a);
+document.getElementById('result').innerHTML=resultado;
+}
+function dameCuentaBancaria( ){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+var resultado=midameCuentaBancaria();
+document.getElementById('result').innerHTML=resultado;
+}
+</script>
+<script type="text/javascript">
+var cuentasBancarias=[];
+function micrearCuentasBancarias(cantidadCuentas){
+    for(i=0;i<cantidadCuentas;i++){
+        cuentasBancarias.push(Math.floor(Math.pow(10,20)*Math.random()));
+	}
+	if (i==cantidadCuentas){
+	    return cuentasBancarias.length;
+	} else {
+        return cuentasBancarias.length;
+	}
+}
+function midameCuentaBancaria(){
+var longitud=cuentasBancarias.length;
+var indice=Math.floor(Math.random() * longitud);
+//return cuentasBancarias[Math.floor(Math.random*longitud)];    
+//return cuentasBancarias[Math.floor((Math.random() * longitud) + 1)];
+return cuentasBancarias[indice];
+}
+</script>
+<body>
+<input id="op1" type="text">
+<input id="op2" type="text">
+<p id="result">Resultado</p>
+<button type="button" onclick="crearCuentasBancarias()"> Crear Cuentas</button>
+<button type="button" onclick="dameCuentaBancaria()"> Dame Cuentas</button>
+</body>
+</html>

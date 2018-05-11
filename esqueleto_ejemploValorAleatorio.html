@@ -1,0 +1,22 @@
+<script type="text/javascript">
+function valorAleatorio( ){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+var resultado=mivalorAleatario(a);
+document.getElementById('result').innerHTML=resultado;
+}
+</script>
+<script type="text/javascript">
+function mivalorAleatario(numDigitos){
+	numDigitos++;
+	numDigitos++;
+return Math.floor(Math.pow(10,numDigitos)*Math.random())/100;;
+}
+</script>
+<body>
+<input id="op1" type="text">
+<input id="op2" type="text">
+<p id="result">Resultado</p>
+<button type="button" onclick="valorAleatorio()"> valor aleatorio</button>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<script type="text/javascript">
+var variableLocal = "Esta es una variable global en realidad"
+function probandoVariables(){
+	alert(variableLocal)
+	variableGlobalAlNoEstarDeclarada = "VariableGloablNoDeclarada";
+	}
+function probandoConVariablesComoParametros(variableLocal){
+alert(variableGlobalAlNoEstarDeclarada);
+alert(variableLocal);
+}
+probandoVariables();
+probandoConVariablesComoParametros(variableLocal);
+probandoConVariablesComoParametros(variableLocal);
+</script>
+<body>
+<button type="button" onclick="saluda()"> Prueba</button>
+<p id=demo></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<script type="text/javascript">
+function primo( ){
+var a=document.getElementById('op1').value;
+var b=document.getElementById('op2').value;
+var resultado=miPrimo(a);
+document.getElementById('result').innerHTML=resultado;
+}
+</script>
+<script type="text/javascript">
+function miPrimo(numDigitos){
+	var a= numDigitos;
+	var hasta=Math.sqrt(a);
+	var divisor=a;
+	if (a===2){
+		return "Es primo1";
+	}
+	else{
+		if ((a%2)==0){
+			return "No es primo, divisible entre 2";
+		}
+		for (var i=3;i<=hasta;i=i+2){
+			if ((a%i)==0){
+				divisor=i;
+				break;
+			}
+		}
+		if (divisor==a){
+			return "Es primo";
+		}
+		return "No es primo, divisible entre "+i;
+	}
+ 
+} 
+</script>
+<body>
+<input id="op1" type="text">
+<input id="op2" type="text">
+<p id="result">Resultado</p>
+<button type="button" onclick="primo()"> primo</button>
+</body>
+</html>
